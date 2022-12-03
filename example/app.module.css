@@ -1,0 +1,30 @@
+.root {
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.tabs {
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: #eee;
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+
+  @apply transform-gpu;
+}
+
+.item {
+  @apply inline-block h-20 flex items-center justify-center my-2 bg-gray-300;
+}
+
+.tab {
+  @apply flex items-center justify-center flex-grow flex-shrink-0 relative;
+}
+
+.indicator {
+  @apply bottom-0 absolute left-0 h-[2px] bg-blue-500;
+
+  width: 136px;
+}

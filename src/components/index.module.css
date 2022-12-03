@@ -1,0 +1,36 @@
+.root {
+  &:hover .indicator {
+    opacity: 1;
+  }
+
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  @apply w-full whitespace-nowrap overflow-auto h-full;
+
+  scroll-snap-type: x mandatory;
+  display: flex;
+  align-items: flex-start;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.child {
+  @apply inline-block h-full overflow-auto;
+}
+
+.child {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  flex-shrink: 0;
+
+  text-align: center;
+}
+
+.child:last-child {
+  margin-right: 0 !important;
+}
